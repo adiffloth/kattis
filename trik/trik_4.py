@@ -5,6 +5,6 @@ for move in input():
     elif move == 'B' and ball != 1:
         ball = 5 - ball
     elif move == 'C' and ball != 2:
-        ball = (ball + 2) % 4
+        ball = 4 - ball
 
 print(ball)
