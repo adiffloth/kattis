@@ -1,9 +1,8 @@
 '''
-Try as a dict. Fails on group 2 - time limit exceeded.
-The remove parts are probably fast, but we don't even get there
-because the Case 2 are too slow.
+Variation on clinic_3 where we try different ways of reading input.
+Made no improvement.
 '''
-# TODO: Read the file in all at once.
+
 
 from sys import stdin
 # from heapq import heappush, heappop, heapify
@@ -11,8 +10,8 @@ from sys import stdin
 num_queries, K = map(int, input().split())
 d = {}
 
-for i in range(num_queries):
-    line = stdin.readline().strip().split()
+for query in stdin:
+    line = query.split()
 
     if line[0] == '1':
         priority = K * int(line[1]) - int(line[3])
